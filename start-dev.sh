@@ -45,7 +45,7 @@ case $choice in
         sleep 10
         
         echo "🔧 Starting Backend (Spring Boot)..."
-        cd .idea/login-rest-api
+        cd login-rest-api
         echo "Backend will start on http://localhost:8080"
         echo "Press Ctrl+C to stop backend"
         ./mvnw spring-boot:run &
@@ -80,7 +80,7 @@ case $choice in
         echo "🗄️  Starting Database Only..."
         docker-compose up postgres
         echo "✅ Database started. Run backend and frontend locally:"
-        echo "Backend: cd .idea/login-rest-api && ./mvnw spring-boot:run"
+        echo "Backend: cd login-rest-api && ./mvnw spring-boot:run"
         echo "Frontend: cd frontend && npm run dev"
         ;;
         

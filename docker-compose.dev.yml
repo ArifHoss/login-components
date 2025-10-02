@@ -21,7 +21,7 @@ services:
   # Backend with volume mount for hot reload
   backend:
     build:
-      context: ./.idea/login-rest-api
+      context: login-rest-api
       dockerfile: Dockerfile.dev
     container_name: login-backend-dev
     restart: unless-stopped
@@ -38,8 +38,8 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       JWT_EXPIRATION: ${JWT_EXPIRATION}
     volumes:
-      - ./.idea/login-rest-api/src:/app/src
-      - ./.idea/login-rest-api/target:/app/target
+      - ./login-rest-api/src:/app/src
+      - ./login-rest-api/target:/app/target
     depends_on:
       - postgres
     networks:
