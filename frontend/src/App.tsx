@@ -1,7 +1,8 @@
+import React from 'react'
 import Navbar from './components/Navbar'
 import './App.css'
 
-function App() {
+function App(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -13,7 +14,7 @@ function App() {
                 Welcome to Login Components
               </h1>
               <p className="text-lg text-gray-600 mb-8">
-                A modern authentication system built with React and Spring Boot
+                A modern authentication system built with React, TypeScript, and Spring Boot
               </p>
               <div className="space-x-4">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
